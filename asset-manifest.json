@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/Stack-Overflow-Clone/static/css/main.05640100.chunk.css",
+    "main.js": "/Stack-Overflow-Clone/static/js/main.f7f74926.chunk.js",
+    "main.js.map": "/Stack-Overflow-Clone/static/js/main.f7f74926.chunk.js.map",
+    "runtime-main.js": "/Stack-Overflow-Clone/static/js/runtime-main.be51722f.js",
+    "runtime-main.js.map": "/Stack-Overflow-Clone/static/js/runtime-main.be51722f.js.map",
+    "static/js/2.6a8ea22d.chunk.js": "/Stack-Overflow-Clone/static/js/2.6a8ea22d.chunk.js",
+    "static/js/2.6a8ea22d.chunk.js.map": "/Stack-Overflow-Clone/static/js/2.6a8ea22d.chunk.js.map",
+    "index.html": "/Stack-Overflow-Clone/index.html",
+    "precache-manifest.6545f6ef16fe0cf1b81f927f7e23ea3f.js": "/Stack-Overflow-Clone/precache-manifest.6545f6ef16fe0cf1b81f927f7e23ea3f.js",
+    "service-worker.js": "/Stack-Overflow-Clone/service-worker.js",
+    "static/css/main.05640100.chunk.css.map": "/Stack-Overflow-Clone/static/css/main.05640100.chunk.css.map",
+    "static/js/2.6a8ea22d.chunk.js.LICENSE.txt": "/Stack-Overflow-Clone/static/js/2.6a8ea22d.chunk.js.LICENSE.txt",
+    "static/media/logo-stackoverflow.svg": "/Stack-Overflow-Clone/static/media/logo-stackoverflow.5ea02efb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.be51722f.js",
+    "static/js/2.6a8ea22d.chunk.js",
+    "static/css/main.05640100.chunk.css",
+    "static/js/main.f7f74926.chunk.js"
+  ]
+}
