@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Stack-Overflow-Clone/static/css/main.05640100.chunk.css",
-    "main.js": "/Stack-Overflow-Clone/static/js/main.bddecb58.chunk.js",
-    "main.js.map": "/Stack-Overflow-Clone/static/js/main.bddecb58.chunk.js.map",
-    "runtime-main.js": "/Stack-Overflow-Clone/static/js/runtime-main.be51722f.js",
-    "runtime-main.js.map": "/Stack-Overflow-Clone/static/js/runtime-main.be51722f.js.map",
-    "static/js/2.f824650d.chunk.js": "/Stack-Overflow-Clone/static/js/2.f824650d.chunk.js",
-    "static/js/2.f824650d.chunk.js.map": "/Stack-Overflow-Clone/static/js/2.f824650d.chunk.js.map",
-    "index.html": "/Stack-Overflow-Clone/index.html",
-    "precache-manifest.2388c790855717e8c1d9e6ffd02304ef.js": "/Stack-Overflow-Clone/precache-manifest.2388c790855717e8c1d9e6ffd02304ef.js",
-    "service-worker.js": "/Stack-Overflow-Clone/service-worker.js",
-    "static/css/main.05640100.chunk.css.map": "/Stack-Overflow-Clone/static/css/main.05640100.chunk.css.map",
-    "static/js/2.f824650d.chunk.js.LICENSE.txt": "/Stack-Overflow-Clone/static/js/2.f824650d.chunk.js.LICENSE.txt",
-    "static/media/logo-stackoverflow.svg": "/Stack-Overflow-Clone/static/media/logo-stackoverflow.5ea02efb.svg"
+    "main.css": "/static/css/main.f6252b10.chunk.css",
+    "main.js": "/static/js/main.df5424de.chunk.js",
+    "main.js.map": "/static/js/main.df5424de.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bf4bdaea.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bf4bdaea.js.map",
+    "static/js/2.f824650d.chunk.js": "/static/js/2.f824650d.chunk.js",
+    "static/js/2.f824650d.chunk.js.map": "/static/js/2.f824650d.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.47422769d7287560c24cc83773405c34.js": "/precache-manifest.47422769d7287560c24cc83773405c34.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.f6252b10.chunk.css.map": "/static/css/main.f6252b10.chunk.css.map",
+    "static/js/2.f824650d.chunk.js.LICENSE.txt": "/static/js/2.f824650d.chunk.js.LICENSE.txt",
+    "static/media/logo-stackoverflow.svg": "/static/media/logo-stackoverflow.5ea02efb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.be51722f.js",
+    "static/js/runtime-main.bf4bdaea.js",
     "static/js/2.f824650d.chunk.js",
-    "static/css/main.05640100.chunk.css",
-    "static/js/main.bddecb58.chunk.js"
+    "static/css/main.f6252b10.chunk.css",
+    "static/js/main.df5424de.chunk.js"
   ]
 }
