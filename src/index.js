@@ -1,6 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+
+import { Provider } from 'react-redux';
+import ErrorBoundry from './components/error-boundry';
+import SofService from './services/sof-service';
+import { SofServiceProvider } from './components/sof-service-context';
+import { BrowserRouter as Router} from 'react-router-dom';
+
+import store from './store';
+
 import App from './components/app';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import './index.scss';
+
+const sofService = new SofService();
+
+ReactDOM.render(
+  <Provider store={store}>
+    <ErrorBoundry>
+      <SofServiceProvider value={sofService}>
+        <Router>
+          <App />
+        </Router>
+      </SofServiceProvider>
+    </ErrorBoundry>
+  </Provider>
+, document.getElementById('root'));
+  

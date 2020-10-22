@@ -1,17 +1,21 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
+import { HomePage, UsersPage, TagsPage } from '../pages';
 import Header from '../header';
 // import './App.css';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <h1>Hello world</h1>
-      </div>
-    </Router>
+    <>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/users/" component={UsersPage} />
+        <Route exact path="/tags/" component={TagsPage} />
+      </Switch>
+      <Route exact path="/blank" />
+    </>
   );
 }
 

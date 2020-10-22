@@ -1,0 +1,2 @@
+export const QUESTIONS_LOADED = 'QUESTIONS_LOADED';
+export const QUESTIONS_FILTER = '!B96NeMwIYiJQy*bdTim)okETGvVkZz';

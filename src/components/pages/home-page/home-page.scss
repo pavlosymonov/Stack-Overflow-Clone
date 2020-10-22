@@ -1,0 +1,26 @@
+.questions__container {
+  display: flex;
+}
+
+.questions__content {
+  border-left: 1px solid #d6d9dc;
+  width: calc(100% - 164px);
+  padding: 24px 24px 0;
+  display: flex;
+}
+
+.multiplier {
+  font-size: 11px;
+  color: #6a737c;
+}
+
+.related-tags {
+  margin-left: 24px;
+  width: 200px;
+  h4 {
+    font-size: 18px;
+    font-weight: 400;
+    color: #3c4146;
+    margin-bottom: 18px;
+  }
+}

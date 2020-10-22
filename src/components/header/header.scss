@@ -13,6 +13,7 @@
   z-index: 1000;
   &__row {
     width: 100%;
+    display: flex;
   }
   &__container {
     height: 100%;
@@ -25,31 +26,6 @@
       width: 150px;
       height: 30px;
     }
-  }
-  &__nav {
-    display: flex;
-    align-items: center;
-  }
-  &__nav-list {
-    display: flex;
-    li {
-      margin: 2px;
-      a {
-        display: inline-block;
-        padding: 6px 16px;
-        border-radius: 50px;
-        color: #535a60;
-        white-space: nowrap;
-        &:hover {
-          background-color: #e4e6e8;
-          color: #0c0d0e;
-        }
-      }
-    }
-  }
-  &__link-active {
-    background-color: #e4e6e8;
-    color: #0c0d0e;
   }
   &__login-btn {
     color: #39739d;
