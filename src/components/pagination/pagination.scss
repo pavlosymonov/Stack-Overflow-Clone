@@ -1,0 +1,21 @@
+.pagination {
+  margin-bottom: 5px;
+  span {
+    margin-left: 2px;
+    margin-right: 2px;
+    padding: 0 8px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #d6d9dc;
+    font-size: 13px;
+    line-height: 1.92307692;
+    color: #3c4146;
+    cursor: pointer;
+  }
+  .is-selected {
+    border-color: transparent;
+    background-color: #f48024;
+    color: #fff;
+    cursor: default;
+  }
+}

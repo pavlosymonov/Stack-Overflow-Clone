@@ -1,25 +1,31 @@
 import React from 'react';
-import { withSofService } from '../hoc';
+
 import QuestionsItem from '../questions-item';
+import Pagination from '../pagination';
 
 import './questions-list.scss';
 
-const QuestionsList = ({ sofService }) => {
-  const items = sofService.getQuestions();
-
+const QuestionsList = (p) => {
   return (
-    <ul className="questions__list">
-      {
-        items.map((data) => {
-          return (
-            <li key={data.question_id}>
-              <QuestionsItem data={data} />
-            </li>
-          )
-        })
-      }
-    </ul>
+    <>
+      <Pagination
+        currentPage={p.currentPage}
+        pageSize={p.pageSize}
+        totalItems={p.totalItems}
+        setCurrentPage={p.onPageChange}/>
+      <ul className="questions__list">
+        {
+          p.questions.map((data) => {
+            return (
+              <li key={data.question_id}>
+                <QuestionsItem data={data} />
+              </li>
+            )
+          })
+        }
+      </ul>
+    </>
   );
-};
+}
 
-export default withSofService()(QuestionsList);
+export default QuestionsList;

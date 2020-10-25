@@ -1,7 +1,6 @@
 import React from 'react';
-import QuestionsList from '../../questions-list';
+import { QuestionsListContainer } from '../../../containers';
 import SideBar from '../../side-bar';
-import { withSofService } from '../../hoc';
 import { Link } from 'react-router-dom';
 import './home-page.scss';
 
@@ -33,7 +32,7 @@ const RelatedTags = ({ sofService }) => {
   );
 };
 
-const HomePage = ({ sofService }) => {
+const HomePage = () => {
   return (
     <section className="questions">
       <div className="container">
@@ -42,9 +41,9 @@ const HomePage = ({ sofService }) => {
           <div className="questions__content">
             <div>
               <h1>All Questions</h1>
-              <QuestionsList />
+              <QuestionsListContainer />
             </div>
-            <RelatedTags sofService={sofService} />
+            {/* <RelatedTags sofService={sofService} /> */}
           </div>
         </div>
 
@@ -53,4 +52,4 @@ const HomePage = ({ sofService }) => {
   );
 };
 
-export default withSofService()(HomePage);
+export default HomePage;
