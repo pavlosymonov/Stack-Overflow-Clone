@@ -11,7 +11,7 @@ const initialState = {
   loading: true,
   error: null,
   currentPage: 1,
-  pageSize: 5,
+  pageSize: 15,
   totalItems: 0
 };
 

@@ -6,6 +6,8 @@ import {
   SET_TOTAL_ITEMS_COUNT
 } from '../actions-types';
 
+import sofService from '../services/sof-service';
+
 const questionsLoaded = (newQuestions) => (
   { type: QUESTIONS_LOADED, payload: newQuestions }
 );
@@ -19,7 +21,7 @@ const setTotalItemsCount = (totalItemsCount) => (
   { type: SET_TOTAL_ITEMS_COUNT, payload: totalItemsCount}
 );
 
-export const fetchQuestions = (dispatch, sofService) => (url) => {
+export const getQuestions = (url) => (dispatch) => {
   dispatch(questionsRequested());
   sofService.getQuestions(url)
     .then(data => {
