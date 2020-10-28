@@ -10,15 +10,30 @@ import { withSofService } from '../components/hoc';
 
 class RelatedTagsContainer extends Component {
   state = {
-    relatedTags: []
+    relatedTags: [],
+    loading: true,
+    isShowAll: false
   }
 
   componentDidMount() {
-    this.setState({relatedTags: this.props.sofService.getTags() });
+    this.props.sofService.getTags('tags?page=1&pagesize=25&order=desc&sort=popular&site=stackoverflow&filter=!-.G.68pqislT')
+      .then(data => {
+        this.setState({
+          relatedTags: data.items,
+          loading: false
+        });
+      })
+  }
+
+  onMoreBtnClick = () => {
+    this.setState({ isShowAll: true });
   }
 
   render() {
-    return <RelatedTags relatedTags={this.state.relatedTags} />
+    if (this.state.loading) {
+      return <div>Loading...</div>
+    }
+    return <RelatedTags {...this.state} onMoreBtnClick={this.onMoreBtnClick} />
   }
 }
 

@@ -1,6 +1,8 @@
 .pagination {
-  margin-bottom: 5px;
+  margin: 35px 0;
+  justify-content: space-between;
   span {
+    display: inline-block;
     margin-left: 2px;
     margin-right: 2px;
     padding: 0 8px;
@@ -21,5 +23,9 @@
   .pag-ellipsis {
     cursor: default;
     border: none;
+  }
+  .per-page {
+    display: inline;
+    margin: 0 10px;
   }
 }

@@ -2,17 +2,20 @@ import React from 'react';
 
 import QuestionsItem from '../questions-item';
 import Pagination from '../pagination';
+import Filters from '../sorts';
+import { numberWithCommas } from '../../utils';
 
 import './questions-list.scss';
 
 const QuestionsList = (p) => {
   return (
     <>
-      <Pagination
-        currentPage={p.currentPage}
-        pageSize={p.pageSize}
-        totalItems={p.totalItems}
-        setCurrentPage={p.onPageChange}/>
+      <Filters
+        totalItems={`${numberWithCommas(p.totalItems)} questions`}
+        onSortChanged={p.onSortChanged}
+        sorts={p.sorts}
+        currentSort={p.sort}
+        loading={p.loading}/>
       <ul className="questions__list">
         {
           p.questions.map((data) => {
@@ -24,6 +27,12 @@ const QuestionsList = (p) => {
           })
         }
       </ul>
+      <Pagination
+        currentPage={p.currentPage}
+        pageSize={p.pageSize}
+        totalItems={p.totalItems}
+        setCurrentPage={p.onPageChange}
+        onPageSizeChanged={p.onPageSizeChanged}/>
     </>
   );
 }

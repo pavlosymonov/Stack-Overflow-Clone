@@ -1,7 +1,8 @@
 import React from 'react';
 import './pagination.scss';
 
-const Pagination = ({ totalItems, pageSize, currentPage, setCurrentPage }) => {
+const Pagination = ({ totalItems, pageSize,
+    currentPage, setCurrentPage, onPageSizeChanged }) => {
   const maxPages = 4;
   const pageCount = Math.ceil(totalItems / pageSize);
 
@@ -77,10 +78,23 @@ const Pagination = ({ totalItems, pageSize, currentPage, setCurrentPage }) => {
 
     return pages;
   }
+
+  function pageSizeBtns() {
+    return [15, 30, 50].map(size => {
+      return <span key={size} onClick={() => onPageSizeChanged(size)}
+        className={size === pageSize ? "is-selected" : ""}>{size}</span>
+    });
+  }
   
   return <>
     <div className="pagination">
-      {pageButtons()}
+      <div className="pagination-list">
+        {pageButtons()}
+      </div>
+      <div className="page-size">
+        {pageSizeBtns()}
+        <div className="per-page">per page</div>
+      </div>
     </div>
   </>
 };

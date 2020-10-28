@@ -3,7 +3,10 @@ import {
   QUESTIONS_REQUESTED,
   QUESTIONS_ERROR,
   CHANGE_CURRENT_PAGE,
-  SET_TOTAL_ITEMS_COUNT
+  SET_TOTAL_ITEMS_COUNT,
+  CHANGE_PAGE_SIZE,
+  SET_SORT,
+  SET_ORDER
 } from '../actions-types';
 
 const initialState = {
@@ -12,7 +15,9 @@ const initialState = {
   error: null,
   currentPage: 1,
   pageSize: 15,
-  totalItems: 0
+  totalItems: 0,
+  sort: "activity",
+  order: "desc"
 };
 
 const questionsReducer = (state = initialState, action) => {
@@ -42,12 +47,27 @@ const questionsReducer = (state = initialState, action) => {
       return {
         ...state,
         currentPage: action.payload
-      }
+      };
+    case CHANGE_PAGE_SIZE:
+      return {
+        ...state,
+        pageSize: action.payload
+      };
     case SET_TOTAL_ITEMS_COUNT:
       return {
         ...state,
         totalItems: action.payload
-      }
+      };
+    case SET_SORT:
+      return {
+        ...state,
+        sort: action.payload
+      };
+    case SET_ORDER:
+      return {
+        ...state,
+        order: action.payload
+      };
     default:
       return state;
   }

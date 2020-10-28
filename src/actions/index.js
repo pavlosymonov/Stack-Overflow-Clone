@@ -3,7 +3,10 @@ import {
   QUESTIONS_REQUESTED,
   QUESTIONS_ERROR,
   CHANGE_CURRENT_PAGE,
-  SET_TOTAL_ITEMS_COUNT
+  CHANGE_PAGE_SIZE,
+  SET_TOTAL_ITEMS_COUNT,
+  SET_ORDER,
+  SET_SORT
 } from '../actions-types';
 
 import sofService from '../services/sof-service';
@@ -31,4 +34,7 @@ export const getQuestions = (url) => (dispatch) => {
     .catch(error => dispatch(questionsError(error)));
 }
 
-export const setCurrentPage = (newPageId) => ({ type: CHANGE_CURRENT_PAGE, payload: newPageId});
+export const setCurrentPage = (newPageId) => ({ type: CHANGE_CURRENT_PAGE, payload: newPageId });
+export const setPageSize = (pageSize) => ({ type: CHANGE_PAGE_SIZE, payload: pageSize });
+export const setOrder = (order) => ({ type: SET_ORDER, payload: order });
+export const setSort = (sort) => ({ type: SET_SORT, payload: sort });
