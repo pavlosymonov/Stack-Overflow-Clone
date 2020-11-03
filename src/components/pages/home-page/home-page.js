@@ -9,9 +9,9 @@ const HomePage = () => {
   return (
     <section className="questions">
       <div className="container">
-        <div className="questions__container">
+        <div className="page__container">
           <SideBar />
-          <div className="questions__content">
+          <div className="page__content">
             <div>
               <h1>All Questions</h1>
               <QuestionsListContainer />

@@ -1,8 +1,15 @@
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, createStore, combineReducers } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-import questionsReducer from './reducers';
+import { questionsReducer, singleQuestionReducer } from './reducers';
 
-const store = createStore(questionsReducer, applyMiddleware(thunkMiddleware));
+const reducers = combineReducers({
+  questionsReducer,
+  singleQuestionReducer
+})
+
+const store = createStore(reducers, applyMiddleware(thunkMiddleware));
+
+window.store = store;
 
 export default store;

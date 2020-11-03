@@ -1,2 +1,2 @@
-import Filters from './sorts';
-export default Filters;
+import Sorts from './sorts';
+export default Sorts;

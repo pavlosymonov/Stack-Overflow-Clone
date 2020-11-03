@@ -65,8 +65,19 @@ class QuestionsListContainer extends Component {
     }));
   }
 
-  onOrderChaned = (order) => {
-    console.log(order);
+  onOrderChanged = (order) => {
+    const { setOrder, setCurrentPage,
+      getQuestions, sort, pageSize } = this.props;
+
+    setOrder(order);
+    setCurrentPage(1);
+    getQuestions(getApiUrl("questions", {
+      page: 1,
+      pagesize: pageSize,
+      order,
+      sort,
+      filter: "!0S2DC*iP9nl5dEmG4*.sVeSJC"
+    }));
   }
 
   render() {
@@ -89,14 +100,16 @@ class QuestionsListContainer extends Component {
       loading={p.loading}
       sorts={sorts}
       sort={p.sort}
+      order={p.order}
       onPageChange={this.onPageChange}
       onPageSizeChanged={this.onPageSizeChanged}
-      onSortChanged={this.onSortChanged} />
+      onSortChanged={this.onSortChanged}
+      onOrderChanged={this.onOrderChanged}/>
   }
 };
 
 const mapStateToProps = (state) => {
-  return state;
+  return state.questionsReducer;
 }
 
 const mapDispatchToProps = {

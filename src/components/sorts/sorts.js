@@ -1,23 +1,36 @@
 import React from 'react';
+import Order from '../order';
 import './sorts.scss';
 
-const Filters = ({ onSortChanged, sorts, totalItems, loading, currentSort }) => {
+const Sorts = (p) => {
+
+  function createSortsList() {
+    return p.sorts.map(sort => {
+      return <button
+        disabled={p.loading}
+        key={sort.field}
+        className={`sorts__item${p.currentSort === sort.field ? " is-selected" : ""}`}
+        onClick={() => p.onSortChanged(sort.field)}
+        >
+          {sort.label}  
+        </button>
+    });
+  }
+
   return (
-    <div className="sorts-block">
-      <div className="total-items">{totalItems}</div>
+    <div className="sorts-header">
+      <div className="total-items">{p.totalItems}</div>
       <div className="sorts">
-        {
-          sorts.map(sort => {
-            return <button disabled={loading} key={sort.field}
-              className={`sorts__item${currentSort === sort.field ? " is-selected" : ""}`}
-              onClick={() => onSortChanged(sort.field)}>
-                {sort.label}  
-              </button>
-          })
-        }
+        <div className="sorts__block">
+          {createSortsList()}
+        </div>
+        <Order
+          onOrderChanged={p.onOrderChanged}
+          currentOrder={p.currentOrder}
+          loading={p.loading} />
       </div>
     </div>
   );
 }
 
-export default Filters;
+export default Sorts;

@@ -1,7 +1,8 @@
-.sorts-block {
+.sorts-header {
   display: flex;
   justify-content: space-between;
   margin-bottom: 12px;
+  align-items: center;
 }
 
 .total-items {
@@ -9,8 +10,11 @@
   margin-right: 10px;
 }
 
-.sorts{
-
+.sorts {
+  display: flex;
+  .order {
+    margin-left: 12px;
+  }
   &__item {
     border: 1px solid #9fa6ad;
     color: #6a737c;

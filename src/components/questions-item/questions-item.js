@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { decode } from 'he';
+import { getShortenNumber } from '../../utils';
 
 import './questions-item.scss';
 
@@ -39,10 +40,7 @@ const QuestionsItem = ({ data }) => {
         <div className="views">
           <div className="mini-counts">
             <span>
-              {
-                data.view_count >= 1000 ?
-                  (data.view_count / 1000).toFixed(0) + 'k' : data.view_count
-              }
+              {getShortenNumber(data.view_count)}
             </span>
           </div>
           <div>view{data.view_count !== 1 ? 's' : ''}</div>

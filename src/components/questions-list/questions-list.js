@@ -2,19 +2,22 @@ import React from 'react';
 
 import QuestionsItem from '../questions-item';
 import Pagination from '../pagination';
-import Filters from '../sorts';
+import Sorts from '../sorts';
 import { numberWithCommas } from '../../utils';
 
 import './questions-list.scss';
 
 const QuestionsList = (p) => {
+  console.log(p)
   return (
     <>
-      <Filters
+      <Sorts
         totalItems={`${numberWithCommas(p.totalItems)} questions`}
         onSortChanged={p.onSortChanged}
+        onOrderChanged={p.onOrderChanged}
         sorts={p.sorts}
         currentSort={p.sort}
+        currentOrder={p.order}
         loading={p.loading}/>
       <ul className="questions__list">
         {
