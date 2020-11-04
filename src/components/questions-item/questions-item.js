@@ -1,18 +1,11 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { decode } from 'he';
-import { getShortenNumber } from '../../utils';
+import { getShortenNumber, getDateFormat } from '../../utils';
 
 import './questions-item.scss';
 
 const QuestionsItem = ({ data }) => {
-
-  function getDateOfPublication(date) {
-    const postedDate = new Date(date);
-    const dateArr = postedDate.toString().split(' ');
-    
-    return `asked ${dateArr[1]} ${dateArr[2]} '${postedDate.getSeconds()} at ${postedDate.getHours()}:${postedDate.getMinutes()} `;
-  }
 
   function isAnswered(isAnswered, answerCount) {
     let activeClases = 'status';
@@ -68,7 +61,8 @@ const QuestionsItem = ({ data }) => {
           <div className="started">
             <Link to={`/questions/${data.question_id}`} className="started-link">
               <span className="relativetime">
-                {getDateOfPublication(data.creation_date)}
+                asked 
+                {getDateFormat(data.creation_date)}
               </span>
             </Link>
             <Link to={`/users/${data.owner.display_name}`}>

@@ -19,3 +19,10 @@ export function getShortenNumber(number) {
   }
   return number;
 }
+
+export function getDateFormat(secDate) {
+  const date = new Date(secDate * 1000);
+  const dateArr = date.toString().split(' ');
+  
+  return `${dateArr[1]} ${dateArr[2]} '${date.getSeconds()} at ${date.getHours()}:${date.getMinutes()} `;
+}

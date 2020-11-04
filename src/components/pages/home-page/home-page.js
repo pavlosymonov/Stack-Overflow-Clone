@@ -11,8 +11,8 @@ const HomePage = () => {
       <div className="container">
         <div className="page__container">
           <SideBar />
-          <div className="page__content">
-            <div>
+          <div className="page__content flex-content">
+            <div className="questions__mainbar">
               <h1>All Questions</h1>
               <QuestionsListContainer />
             </div>

@@ -8,7 +8,7 @@ import Header from '../header';
 function App() {
   return (
     <>
-      <Redirect from='/Stack-Overflow-Clone/' to="/" />{/*   Dev only    */}
+      {/* <Redirect from='/Stack-Overflow-Clone/' to="/" />  Dev only    */}
       
       <Header />
       <Switch>

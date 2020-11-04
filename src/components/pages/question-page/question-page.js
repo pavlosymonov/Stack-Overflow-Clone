@@ -6,7 +6,7 @@ const QuestionPage = () => {
   return (
     <section className="question">
       <div className="container">
-        <div className="main__container">
+        <div className="page__container">
           <SideBar />
           <QuestionContainer />
         </div>

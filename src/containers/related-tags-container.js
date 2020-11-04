@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 import RelatedTags from '../components/related-tags';
 import { withSofService } from '../components/hoc';
-
-// const withRequested = (View, getData) => {
-//   return class extends Component {
-
-//   }
-// }
+import Spinner from '../components/spinner';
 
 class RelatedTagsContainer extends Component {
   state = {
@@ -31,7 +26,7 @@ class RelatedTagsContainer extends Component {
 
   render() {
     if (this.state.loading) {
-      return <div>Loading...</div>
+      return <Spinner />
     }
     return <RelatedTags {...this.state} onMoreBtnClick={this.onMoreBtnClick} />
   }

@@ -8,7 +8,6 @@ import { numberWithCommas } from '../../utils';
 import './questions-list.scss';
 
 const QuestionsList = (p) => {
-  console.log(p)
   return (
     <>
       <Sorts
