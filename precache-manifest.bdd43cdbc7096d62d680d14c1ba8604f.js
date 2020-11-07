@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1dd10086f29902ed025ec7abd193da94",
+    "revision": "59ebaf81655611bc159d5040625bd49b",
     "url": "/Stack-Overflow-Clone/index.html"
   },
   {
-    "revision": "7e992882acb75960b6e7",
-    "url": "/Stack-Overflow-Clone/static/css/main.9f2a822a.chunk.css"
+    "revision": "3cc812a2e6563e2b7ac8",
+    "url": "/Stack-Overflow-Clone/static/css/main.4310d981.chunk.css"
   },
   {
-    "revision": "9f307f271c57216fd3b5",
-    "url": "/Stack-Overflow-Clone/static/js/2.50f847a8.chunk.js"
+    "revision": "d441e787b9c68d52a134",
+    "url": "/Stack-Overflow-Clone/static/js/2.5aed8ab7.chunk.js"
   },
   {
     "revision": "50911787c302d34183ea402d71089b4c",
-    "url": "/Stack-Overflow-Clone/static/js/2.50f847a8.chunk.js.LICENSE.txt"
+    "url": "/Stack-Overflow-Clone/static/js/2.5aed8ab7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7e992882acb75960b6e7",
-    "url": "/Stack-Overflow-Clone/static/js/main.573f1977.chunk.js"
+    "revision": "3cc812a2e6563e2b7ac8",
+    "url": "/Stack-Overflow-Clone/static/js/main.4c56925b.chunk.js"
   },
   {
     "revision": "ab407ae88ff357eae198",
