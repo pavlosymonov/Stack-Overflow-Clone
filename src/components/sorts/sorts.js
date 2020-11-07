@@ -3,7 +3,6 @@ import Order from '../order';
 import './sorts.scss';
 
 const Sorts = (p) => {
-
   function createSortsList() {
     return p.sorts.map(sort => {
       return <button

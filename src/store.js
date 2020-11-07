@@ -4,8 +4,8 @@ import thunkMiddleware from 'redux-thunk';
 import { questionsReducer, singleQuestionReducer } from './reducers';
 
 const reducers = combineReducers({
-  questionsReducer,
-  singleQuestionReducer
+  questionsPage: questionsReducer,
+  singleQuestionPage: singleQuestionReducer
 })
 
 const store = createStore(reducers, applyMiddleware(thunkMiddleware));

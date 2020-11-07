@@ -4,7 +4,7 @@
 
 .page__content {
   width: calc(100% - 164px);
-  padding: 24px 24px 0;
+  padding: 24px;
 }
 
 .multiplier {
@@ -24,4 +24,7 @@
 }
 .flex-content {
   display: flex;
+}
+.grow-content {
+  flex-grow: 1;
 }

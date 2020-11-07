@@ -23,6 +23,15 @@ export function getShortenNumber(number) {
 export function getDateFormat(secDate) {
   const date = new Date(secDate * 1000);
   const dateArr = date.toString().split(' ');
+  let s = date.getSeconds(),
+    h = date.getHours(),
+    m = date.getMinutes();
   
-  return `${dateArr[1]} ${dateArr[2]} '${date.getSeconds()} at ${date.getHours()}:${date.getMinutes()} `;
+  return `${dateArr[1]} ${dateArr[2]} '${s < 10 ? '0' + s : s} at ${h < 10 ? '0' + h : h}:${m < 10 ? '0' + m : m} `;
 }
+
+export const mainSorts = [
+  {field: "activity", label: "Activity"},
+  {field: "votes", label: "Votes"},
+  {field: "creation", label: "Creation"},
+]

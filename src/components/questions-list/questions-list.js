@@ -2,6 +2,7 @@ import React from 'react';
 
 import QuestionsItem from '../questions-item';
 import Pagination from '../pagination';
+import PageSize from '../page-size';
 import Sorts from '../sorts';
 import { numberWithCommas } from '../../utils';
 
@@ -29,12 +30,17 @@ const QuestionsList = (p) => {
           })
         }
       </ul>
-      <Pagination
-        currentPage={p.currentPage}
-        pageSize={p.pageSize}
-        totalItems={p.totalItems}
-        setCurrentPage={p.onPageChange}
-        onPageSizeChanged={p.onPageSizeChanged}/>
+      <div className="pagination">
+        <Pagination
+          currentPage={p.currentPage}
+          pageSize={p.pageSize}
+          totalItems={p.totalItems}
+          setCurrentPage={p.onPageChange} />
+        <PageSize
+          pageSize={p.pageSize}
+          onPageSizeChanged={p.onPageSizeChanged} />
+      </div>
+      
     </>
   );
 }

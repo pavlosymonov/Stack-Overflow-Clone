@@ -1,5 +1,5 @@
 const initialState = {
-  questions: {},
+  question: {},
   loading: true,
   error: null,
 };
@@ -9,8 +9,8 @@ const singleQuestionReducer = (state = initialState, action) => {
     case "QUESTION_REQUESTED":
       return {
         ...state,
-        questions: [],
-        loading:true,
+        questions: {},
+        loading: true,
         error: null
       };
     case "QUESTION_LOADED":
@@ -23,7 +23,7 @@ const singleQuestionReducer = (state = initialState, action) => {
     case "QUESTION_ERROR":
       return {
         ...state,
-        questions: [],
+        questions: {},
         loading:false,
         error: action.payload
       };

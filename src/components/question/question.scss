@@ -10,18 +10,22 @@
     margin-left: 3px;
   }
 }
+
 .activity-type {
   color: #6a737c;
   margin-right: 5px;
 }
+
 .question h1 {
   margin-bottom: 15px;
 }
+
 .question__header {
   width: 100%;
 }
 
-pre.prettyprint-override {
+pre.prettyprint-override,
+.content__body pre {
   font-size: 13px;
   line-height: 1.30769231;
   color: #2f3337;
@@ -35,100 +39,68 @@ pre.prettyprint-override {
   scrollbar-color: rgba(0,0,0,.2) transparent;
   margin-bottom: 20px;
 }
-.question__body {
+
+.content__body pre code {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.content__body {
   font-size: 15px;
   line-height: 1.5;
 }
-.question__body p {
+
+.content__body p {
   margin-bottom: 16px;
 }
-.question__body *:not(.prettyprint-override) > code {
+
+.content__body *:not(.prettyprint-override):not(pre) > code,
+.comments code {
   background-color: #e4e6e8;
   color: #242729;
   border-radius: 3px;
   padding: 2px 4px;
+  white-space: pre;
 }
-.question__body ul {
+
+.content__body ul,
+.content__body ol {
   margin-left: 30px;
   margin-bottom: 16px;
   li {
     margin-bottom: 8px;
   }
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
-.question__body li {
+.content__body li {
   display: list-item;
+  margin-bottom: 8px;
 }
-.vote-btn svg {
-  fill: #bbc0c4;
+.content__body img {
+  max-width: 100%;
 }
-.vote-count {
-  color: #6a737c;
+.content__body h1,
+.content__body h2,
+.content__body h3 {
+  font-weight: 700;
+  color: #242729;
+}
+.content__body h3 code {
+  font-size: 17px;
+}
+.content__body h1 {
+  margin-bottom: 16px;
+  font-size: 27px;
+}
+.content__body h2 {
+  margin-bottom: 14px;
   font-size: 21px;
 }
-.question__votecell {
-  text-align: center;
-  padding-right: 16px;
-}
-.question {
-  &__user-info {
-    box-sizing: border-box;
-    padding: 5px 6px 7px 7px;
-    color: #6a737c;
-    background-color: #e1ecf4;
-    border-radius: 3px;
-    margin: 4px 0;
-    width: 200px;
-    margin-left: auto;
-  }
-  &__user-action-time {
-    margin-top: 1px;
-    margin-bottom: 4px;
-    font-size: 12px;
-    color: #6a737c;
-    .relativetime {
-      margin-left: 4px;
-    }
-  }
-  &__user-details {
-    margin-left: 8px;
-    a {
-      color: #0077cc;
-    }
-    .badgecount {
-      font-weight: 400;
-      font-size: 12px;
-      color: #848d95;
-    }
-
-  }
-}
-
-.reputation-score {
-  font-weight: bold;
-  font-size: 12px;
-  margin-right: 2px;
-}
-.user-badge {
-  display: inline-block;
-  width: .5em;
-  height: .5em;
-  border-radius: 25px;
-  margin-right: 3px;
-  margin-left: 2px;
-  &1{
-    background-color: #FFCC01;
-  }
-  &2{
-    background-color:#B4B8BC;
-  }
-  &3{
-    background-color:#D1A684;
-  }
-}
-
-.badge-block {
-  margin-right: 3px;
-  margin-left: 2px;
-  display: flex;
-  align-items: center;
+.content__body h3 {
+  margin-top: 27px;
+  margin-bottom: 14px;
+  font-size: 19px;
 }

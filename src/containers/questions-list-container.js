@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { getQuestions, setCurrentPage,
   setPageSize, setOrder, setSort } from '../actions';
 import { getApiUrl } from '../utils';
-
+import { mainSorts } from '../utils';
 import Spinner from '../components/spinner';
 import ErrorIndicator from '../components/error-indicator';
 import QuestionsList from '../components/questions-list';
@@ -82,11 +82,6 @@ class QuestionsListContainer extends Component {
 
   render() {
     const p = this.props;
-    const sorts = [
-      {field: "activity", label: "Activity"},
-      {field: "votes", label: "Votes"},
-      {field: "creation", label: "Creation"},
-    ]
 
     if (p.loading) return <Spinner />;
   
@@ -98,7 +93,7 @@ class QuestionsListContainer extends Component {
       pageSize={p.pageSize}
       currentPage={p.currentPage}
       loading={p.loading}
-      sorts={sorts}
+      sorts={mainSorts}
       sort={p.sort}
       order={p.order}
       onPageChange={this.onPageChange}
@@ -109,7 +104,7 @@ class QuestionsListContainer extends Component {
 };
 
 const mapStateToProps = (state) => {
-  return state.questionsReducer;
+  return state.questionsPage;
 }
 
 const mapDispatchToProps = {
