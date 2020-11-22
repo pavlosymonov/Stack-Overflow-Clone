@@ -8,10 +8,13 @@
   fill: #f48024;
 }
 .vote-count {
-  color: #6a737c;
   font-size: 21px;
 }
 .question__votecell {
+  color: #6a737c;
   text-align: center;
   padding-right: 16px;
+}
+.vote-label {
+  font-size: 12px;
 }

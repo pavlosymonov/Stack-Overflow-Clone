@@ -1,7 +1,6 @@
 import React from 'react';
 import { QuestionsListContainer } from '../../../containers';
 import SideBar from '../../side-bar';
-import RelatedTagsContainer from '../../../containers/related-tags-container';
 
 import './home-page.scss';
 
@@ -11,13 +10,7 @@ const HomePage = () => {
       <div className="container">
         <div className="page__container">
           <SideBar />
-          <div className="page__content flex-content">
-            <div className="questions__mainbar">
-              <h1>All Questions</h1>
-              <QuestionsListContainer />
-            </div>
-            <RelatedTagsContainer />
-          </div>
+          <QuestionsListContainer />
         </div>
       </div>
     </section>

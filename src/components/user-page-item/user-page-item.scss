@@ -1,0 +1,47 @@
+ul.user__items-container, .user__items-container ul {
+  margin: 0;
+  list-style: none;
+}
+.user__content-item-title {
+  div {
+    color: #242729;
+    font-weight: 700;
+    font-size: 15px;
+  }
+  span {
+    color: #6a737c;
+    margin-left: 4px;
+  }
+}
+.user__content-items-list {
+  background-color: #fafafb;
+  padding: 6px 20px;
+  margin-top: 16px;
+  table {
+    font-size: 13px;
+    tr {
+      margin-bottom: 6px;
+    }
+    td {
+      a {
+        color: #0064bd;
+        &:hover {
+          color: #0095ff;
+        }
+      }
+    }
+  }
+}
+.reputation__item-mount {
+  text-align: right;
+}
+.green-rep-amount {
+  color: #48a868;
+}
+.red-rep-amount {
+  color: #c02d2e;
+}
+.reputation__item-type {
+  color: #6a737c;
+  padding: 0 37px 3px 16px;
+}

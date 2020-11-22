@@ -51,6 +51,7 @@ export default function Comments({ comments }) {
           show {comments.length - 5} more comments
         </button>
       }
+      <div className="comments__notice">comments here</div>
     </div>
   );
 }

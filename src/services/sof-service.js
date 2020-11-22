@@ -5,7 +5,7 @@ const ins = axios.create({
 });
 
 class SofService {
-  getResponse = async (url) => {
+  _getResponse = async (url) => {
     const res = await ins.get(url);
 
     if (res.statusText !== "OK") {
@@ -15,11 +15,8 @@ class SofService {
     
     return res.data;
   }
-  getQuestions = (url) => {
-    return this.getResponse(url);
-  }
-  getTags(url) {
-    return this.getResponse(url)
+  getData = (url) => {
+    return this._getResponse(url);
   }
 };
 

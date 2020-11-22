@@ -50,7 +50,7 @@ const QuestionsItem = ({ data }) => {
               data.tags.map(tag => 
                 <Link
                   key={tag}
-                  to={`/tags/${tag}`}
+                  to={`/questions/tagged/${tag}`}
                   className="post-tag"
                   title={`show questions tagged '${tag}'`}
                   rel="tag"
@@ -61,11 +61,11 @@ const QuestionsItem = ({ data }) => {
           <div className="started">
             <Link to={`/questions/${data.question_id}`} className="started-link">
               <span className="relativetime">
-                asked 
+                asked&nbsp;
                 {getDateFormat(data.creation_date)}
               </span>
             </Link>
-            <Link to={`/users/${data.owner.display_name}`}>
+            <Link to={`/users/${data.owner.user_id}`}>
               {data.owner.display_name} 
             </Link>
             <span className="reputation-score" title="reputation score">

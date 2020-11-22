@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './related-tags.scss';
+import Spinner from "../spinner";
 
-const RelatedTags = ({ relatedTags, onMoreBtnClick, isShowAll }) => {
+const RelatedTags = ({ relatedTags, onMoreBtnClick, isShowAll, loading }) => {
   
   function getTagsToShow(count) {
     const tags = [];
@@ -11,7 +12,7 @@ const RelatedTags = ({ relatedTags, onMoreBtnClick, isShowAll }) => {
       tags.push((
         <li key={relatedTags[i].name}>
           <Link 
-          to={`/tags/${relatedTags[i].name}`} className="post-tag" rel="tag">
+          to={`/questions/tagged/${relatedTags[i].name}`} className="post-tag" rel="tag">
             {relatedTags[i].name}
           </Link>
           <span className="multiplier">
@@ -28,15 +29,20 @@ const RelatedTags = ({ relatedTags, onMoreBtnClick, isShowAll }) => {
   
   return (
     <div className="related-tags">
-      <h4>Related Tags</h4>
-      <ul>
-        {isShowAll ? getTagsToShow(relatedTags.length) : getTagsToShow(10)}
-      </ul>
-      {
-        isShowAll ? null : <button onClick={onMoreBtnClick}>
-          more related tags
-        </button>
-      }
+        {
+            loading ? <Spinner /> : (<>
+                <h4>Related Tags</h4>
+                <ul>
+                    {isShowAll ? getTagsToShow(relatedTags.length) : getTagsToShow(10)}
+                </ul>
+                {
+                    isShowAll ? null : <button onClick={onMoreBtnClick}>
+                    more related tags
+                    </button>
+                }
+                </>
+            )
+        }
     </div>
   );
 };

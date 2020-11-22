@@ -8,7 +8,6 @@ import Comments from '../comments';
 import './answers.scss';
 
 export default function Answers(props) {
-  console.log(props.answers)
   const getAnswersList = () => {
     return props.answers.map(el => {
       return <li key={el.answer_id} className="answers__item">
@@ -39,13 +38,15 @@ export default function Answers(props) {
           currentOrder={props.order}
           loading={false} />
       </div>
-      <div className="pagination">
-        <Pagination
-          totalItems={props.answersCount}
-          pageSize="30"
-          currentPage={props.currentPage}
-          setCurrentPage={props.setCurrentPage}/>
-      </div>
+        {
+            props.answersCount > 30 ? <div className="pagination">
+                <Pagination
+                    totalItems={props.answersCount}
+                    pageSize="30"
+                    currentPage={props.currentPage}
+                    setCurrentPage={props.setCurrentPage}/>
+            </div> : null
+        }
       <ul>
         {getAnswersList()}
       </ul>

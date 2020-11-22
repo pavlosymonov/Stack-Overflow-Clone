@@ -21,10 +21,10 @@ const QuestionsList = (p) => {
         loading={p.loading}/>
       <ul className="questions__list">
         {
-          p.questions.map((data) => {
+          p.questions.map((question) => {
             return (
-              <li key={data.question_id}>
-                <QuestionsItem data={data} />
+              <li key={question.question_id}>
+                <QuestionsItem data={question} />
               </li>
             )
           })

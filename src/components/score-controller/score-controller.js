@@ -1,7 +1,19 @@
 import React from 'react';
 import './score-controller.scss';
 
-export default function ScoreController({ onUpVote, onDownVote, score, isAccepted }) {
+export default function ScoreController({ onUpVote, onDownVote, score, isAccepted, closedDetails }) {
+
+  if (closedDetails) {
+    return (
+        <div className="question__votecell">
+          <div>
+            <div className="vote-count">{score}</div>
+            <div className="vote-label">votes</div>
+          </div>
+        </div>
+    );
+  }
+
   return (
     <div className="question__votecell">
       <div>

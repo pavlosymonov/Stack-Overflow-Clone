@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import RelatedTags from '../components/related-tags';
 import { withSofService } from '../components/hoc';
-import Spinner from '../components/spinner';
 
 class RelatedTagsContainer extends Component {
   state = {
@@ -11,7 +10,7 @@ class RelatedTagsContainer extends Component {
   }
 
   componentDidMount() {
-    this.props.sofService.getTags('tags?page=1&pagesize=25&order=desc&sort=popular&site=stackoverflow&filter=!-.G.68pqislT')
+    this.props.sofService.getData('tags?page=1&pagesize=25&order=desc&sort=popular&site=stackoverflow&filter=!-.G.68pqislT')
       .then(data => {
         this.setState({
           relatedTags: data.items,
@@ -25,9 +24,6 @@ class RelatedTagsContainer extends Component {
   }
 
   render() {
-    if (this.state.loading) {
-      return <Spinner />
-    }
     return <RelatedTags {...this.state} onMoreBtnClick={this.onMoreBtnClick} />
   }
 }

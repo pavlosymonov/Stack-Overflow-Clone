@@ -1,5 +1,5 @@
 .activity-block {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-bottom: 15px;
   border-bottom: 1px solid #e4e6e8;
   display: flex;
@@ -103,4 +103,25 @@ pre.prettyprint-override,
   margin-top: 27px;
   margin-bottom: 14px;
   font-size: 19px;
+}
+.closed-question {
+  font-size: 13px;
+  background-color: #e1ecf4;
+  border: 1px solid #a0c7e4;
+  padding: 16px;
+  border-radius: 3px;
+  color: #3c4146;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.closed-icon svg {
+  fill: #3c4146;
+}
+.closed-icon {
+  margin-right: 10px;
+}
+.closed-date {
+  margin-top: 10px;
+  text-align: right;
+  color: #39739d;
 }
