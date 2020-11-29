@@ -15,8 +15,6 @@
   </head>
   <body>
     <div id="root"></div>
-    
-    
     <script type='text/javascript' src='https://api.stackexchange.com/js/2.0/all.js'></script>
     <script async>
       window.authScope = {
@@ -26,37 +24,11 @@
       authScope.SE.init({
         clientId: 18951,
         key: authScope.accessKey,
-        channelUrl: 'https://050f092e9258.ngrok.io/blank',
+        channelUrl: 'https://Dumagenon.github.io/Stack-Overflow-Clone/blank',
         complete: function(data) {
           console.log(data)
         }
       });
     </script>
-<!--    <script type='text/javascript'>-->
-<!--      window.addEventListener('DOMContentLoaded', () => {-->
-<!--        SE.init({-->
-<!--          clientId: 18951,-->
-<!--          key: 'w0fTCx2ODGBKcXnSpDs*ug((',-->
-<!--          channelUrl: 'https://aa33532cdf85.ngrok.io/blank',-->
-<!--          complete: function (data) { console.log(data) }-->
-<!--        });-->
-<!--        document.querySelector('.header__login-btn').addEventListener('click', () => {-->
-<!--          SE.authenticate({-->
-<!--            success: function(data) {-->
-<!--              alert(-->
-<!--                  'User Authorized with account id = ' + -->
-<!--                  data.networkUsers[0].account_id + ', got access token = ' + -->
-<!--                  data.accessToken-->
-<!--              );-->
-<!--            },-->
-<!--            error: function(data) { -->
-<!--              alert('An error occurred:\n' + data.errorName + '\n' + data.errorMessage); -->
-<!--            },-->
-<!--            networkUsers: true-->
-<!--          });-->
-<!--        });-->
-<!--      });-->
-<!--    </script> -->
-<!--  -->
   </body>
 </html>
