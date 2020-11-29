@@ -12,7 +12,7 @@ export default function UserPageItem(props) {
       <div className="user__content-item-header">
         <div className="user__content-item-title flex-content">
           <div>{props.itemName}</div>
-          <span>({numberWithCommas(props.totalItems)})</span>
+          <span>({props.totalItems ? numberWithCommas(props.totalItems) : 0})</span>
         </div>
         {
           sorts ? <Sorts
@@ -20,30 +20,32 @@ export default function UserPageItem(props) {
             onSortChanged={sorts.onSortChanged}
             onOrderChanged={sorts.onOrderChanged}
             sorts={sorts.types}
-            currentSort={sorts.sort}
+            currentSort={sorts.currentSort}
             currentOrder={sorts.order}
-            loading={false} /> : null
+            loading={props.loading} /> : null
         }
       </div>
       <div className="user__content-item-body">
         <div className="user__content-items-list">
-          <table>
+          <table className="user__content-table">
             <tbody>
             {
-              props.data.map(item => {
-                return <tr><View data={item} /></tr>
-              })
+              props.data.length > 0 ? props.data.map((item, i) => {
+                return <View key={i} data={item} />
+              }) : <div>{props.noData}</div>
             }
             </tbody>
           </table>
         </div>
-        <div className="pagination">
-          <Pagination
-            totalItems={props.totalItems}
-            pageSize="10"
-            currentPage={props.currentPage}
-            setCurrentPage={props.setCurrentPage}/>
-        </div>
+        {
+          props.totalItems > 10 ? <div className="pagination">
+            <Pagination
+              totalItems={props.totalItems}
+              pageSize="10"
+              currentPage={props.currentPage}
+              setCurrentPage={props.setCurrentPage}/>
+          </div> : null
+        }
       </div>
     </div>
   </>

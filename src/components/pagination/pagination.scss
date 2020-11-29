@@ -29,3 +29,12 @@
     margin: 0 10px;
   }
 }
+
+@media (max-width: 992px) {
+  .pagination {
+    display: block;
+    .pagination-list {
+      margin-bottom: 12px;
+    }
+  }
+}

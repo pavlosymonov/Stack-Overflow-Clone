@@ -40,5 +40,14 @@
       cursor: default;
     }
   }
+}
 
+@media (max-width: 576px) {
+  .sorts-header {
+    display: block;
+  }
+  .total-items {
+    margin-bottom: 8px;
+    margin-right: 0;
+  }
 }

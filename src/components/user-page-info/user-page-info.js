@@ -53,7 +53,9 @@ export default function UserPageInfo({ data }) {
             <svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18">
               <path d="M2 6.38C2 9.91 8.1 17.7 8.1 17.7c.22.29.58.29.8 0 0 0 6.1-7.8 6.1-11.32A6.44 6.44 0 008.5 0 6.44 6.44 0 002 6.38zm9.25.12a2.75 2.75 0 11-5.5 0 2.75 2.75 0 015.5 0z"></path>
             </svg>
-            <span>{data.location}</span>
+            <span dangerouslySetInnerHTML={{
+              __html: data.location
+            }} />
           </div> : null
         }
         <div className="user__info-item">

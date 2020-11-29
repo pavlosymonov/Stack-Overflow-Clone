@@ -28,3 +28,10 @@
 .grow-content {
   flex-grow: 1;
 }
+
+@media (max-width: 992px) {
+  .page__content {
+    width: 100%;
+    padding: 24px 0;
+  }
+}

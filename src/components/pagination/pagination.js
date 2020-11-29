@@ -80,9 +80,11 @@ const Pagination = ({ totalItems, pageSize,
   }
   
   return <>
-    <div className="pagination-list">
-      {pageButtons()}
-    </div>
+    {
+      totalItems > 0 && pageCount > 1 ? <div className="pagination-list">
+        {pageButtons()}
+      </div> : null
+    }
   </>
 };
 

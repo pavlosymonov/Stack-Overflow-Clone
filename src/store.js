@@ -5,13 +5,17 @@ import {
   questionsReducer,
   singleQuestionReducer,
   usersReducer,
-  tagsReducer } from './reducers';
+  tagsReducer,
+  searchQuestionsReducer,
+  authReducer } from './reducers';
 
 const reducers = combineReducers({
   questionsPage: questionsReducer,
   singleQuestionPage: singleQuestionReducer,
   usersPage: usersReducer,
-  tagsPage: tagsReducer
+  tagsPage: tagsReducer,
+  searchQuestionsPage: searchQuestionsReducer,
+  auth: authReducer
 })
 
 const store = createStore(reducers, applyMiddleware(thunkMiddleware));

@@ -10,29 +10,24 @@ import ErrorIndicator from "../components/error-indicator";
 import sofService from "../services/sof-service";
 import UserPageItem from "../components/user-page-item";
 
-const ReputationItem = ({ data }) => {
+const PrivilegesItem = ({ data }) => {
   return <tr>
     <td>
-      <div className={`reputation__item-mount ${data.reputation_change > 0 ? 'green-rep-amount' : 'red-rep-amount'}`}>
-        {data.reputation_change > 0 ? '+' : ''}{data.reputation_change !== 0 ? data.reputation_change : ''}
-      </div>
-    </td>
-    <td>
-      <div className="reputation__item-type">
-        {data.vote_type.replace(/_/, '')}
+      <div className='reputation__item-mount green-rep-amount'>
+        {data.reputation !== 0 ? data.reputation : ''}{data.reputation > 0 ? '+' : ''}
       </div>
     </td>
     <td>
       <div className="reputation__item-title" dangerouslySetInnerHTML={{
-        __html: data.title
+        __html: data.description
       }} />
     </td>
   </tr>;
 }
 
-const USER_REPUTATION_FILTER = "!0YkVxhHO7dkTlewxZ5-jzSDVC";
+const USER_PRIVILEGES_FILTER = "!*MHdg6Od*l5f14oC";
 
-class UserPageReputationContainer extends Component {
+class UserPagePrivilegesContainer extends Component {
 
   state = {
     data: [],
@@ -54,10 +49,10 @@ class UserPageReputationContainer extends Component {
 
   getUserData = () => {
     const { match } = this.props;
-    const url = getApiUrl(`users/${match.params.id}/reputation`, {
+    const url = getApiUrl(`users/${match.params.id}/privileges`, {
       page: this.state.currentPage,
       pagesize: "10",
-      filter: USER_REPUTATION_FILTER
+      filter: USER_PRIVILEGES_FILTER
     });
 
     sofService.getData(url)
@@ -86,13 +81,13 @@ class UserPageReputationContainer extends Component {
       currentPage={this.state.currentPage}
       setCurrentPage={this.setCurrentPage}
       loading={this.state.loading}
-      itemName="Reputation"
-      View={ReputationItem}
-      noData="This user has not any reputation history."
+      itemName="Privileges"
+      View={PrivilegesItem}
+      noData="This user has not any privileges."
     />;
   }
 };
 
 export default compose(
   withRouter
-)(UserPageReputationContainer);
+)(UserPagePrivilegesContainer);

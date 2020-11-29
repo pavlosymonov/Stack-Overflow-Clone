@@ -1,4 +1,4 @@
-ul.users__list {
+.users__list {
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-gap: 15px;
@@ -101,4 +101,22 @@ ul.users__list {
 .users__full-avatar {
   width: 64px;
   height: 64px;
+}
+
+@media (max-width: 992px) {
+  .users__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .users__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .users__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

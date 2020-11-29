@@ -46,3 +46,21 @@ export const tagsSorts = [
   {field: "activity", label: "Active"},
   {field: "name", label: "Name"},
 ];
+
+export const onUpVote = (e) => {
+  e.preventDefault();
+  if (window.store.getState().auth.accessToken) {
+    alert('Hey you are noob, take a good account!\nFor Up Vote you need min 20 reputation!');
+  } else {
+    alert('You are not authorized!');
+  }
+}
+
+export const onDownVote = (e) => {
+  e.preventDefault();
+  if (window.store.getState().auth.accessToken) {
+    alert('Hey you are noob, take a good account!\nFor Down Vote you need min 100 reputation!');
+  } else {
+    alert('You are not authorized!');
+  }
+}

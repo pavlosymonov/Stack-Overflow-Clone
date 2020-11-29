@@ -23,10 +23,12 @@ const Sorts = (p) => {
         <div className="sorts__block">
           {createSortsList()}
         </div>
-        <Order
-          onOrderChanged={p.onOrderChanged}
-          currentOrder={p.currentOrder}
-          loading={p.loading} />
+        {
+          p.currentOrder ? <Order
+            onOrderChanged={p.onOrderChanged}
+            currentOrder={p.currentOrder}
+            loading={p.loading} /> : null
+        }
       </div>
     </div>
   );

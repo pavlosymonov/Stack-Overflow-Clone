@@ -34,7 +34,9 @@ button {
 	border: none;
 	background: none;
 }
-
+pre, code {
+	word-break: break-all!important;
+}
 code {
 	white-space: pre-wrap;
 	padding: 1px 5px;

@@ -14,3 +14,8 @@
     color: #0095ff;
   }
 }
+@media (max-width: 1000px) {
+  .related-tags {
+    display: none;
+  }
+}

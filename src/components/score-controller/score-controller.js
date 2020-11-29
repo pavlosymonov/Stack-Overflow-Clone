@@ -1,7 +1,8 @@
 import React from 'react';
 import './score-controller.scss';
+import {onDownVote, onUpVote} from "../../utils";
 
-export default function ScoreController({ onUpVote, onDownVote, score, isAccepted, closedDetails }) {
+export default function ScoreController({ score, isAccepted, closedDetails }) {
 
   if (closedDetails) {
     return (

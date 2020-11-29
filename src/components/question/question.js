@@ -36,7 +36,9 @@ export default function Question({ question }) {
   return (
     <div className="page__content">
       <div className="question__header">
-        <h1>{question.title}</h1>
+        <h1 dangerouslySetInnerHTML={{
+          __html: question.title
+        }} />
         <div className="activity-block">
           <div>
             <span className="activity-type">Asked</span>

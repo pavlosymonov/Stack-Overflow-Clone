@@ -1,7 +1,13 @@
 import React from 'react';
 import { UserInfoContainer } from '../../../containers';
 import SideBar from '../../side-bar';
-import UserPageReputationContainer from "../../../containers/user-page-reputation-container";
+import {
+  UserPageReputationContainer,
+  UserPageQuestionsContainer,
+  UserPageAnswersContainer,
+  UserPagePrivilegesContainer
+} from "../../../containers";
+import UserPageTagsContainer from "../../../containers/user-page-tags-container";
 
 const UserPage = () => {
   return (
@@ -13,6 +19,10 @@ const UserPage = () => {
             <UserInfoContainer />
             <ul className="user__items-container">
               <li><UserPageReputationContainer /></li>
+              <li><UserPageQuestionsContainer /></li>
+              <li><UserPageAnswersContainer /></li>
+              <li><UserPagePrivilegesContainer /></li>
+              <li><UserPageTagsContainer /></li>
             </ul>
           </div>
         </div>
