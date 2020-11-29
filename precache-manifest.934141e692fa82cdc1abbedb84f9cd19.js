@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8106cb23fa2b29696c52280b2019ea1d",
+    "revision": "2daf6194214665b561a5dfc60e055ec3",
     "url": "/Stack-Overflow-Clone/index.html"
   },
   {
