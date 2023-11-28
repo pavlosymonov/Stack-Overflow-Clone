@@ -1,4 +1,4 @@
-import * as axios from 'axios';
+import axios from 'axios';
 
 const ins = axios.create({
   baseURL: 'https://api.stackexchange.com/2.2/'
@@ -20,4 +20,6 @@ class SofService {
   }
 };
 
-export default new SofService();
+const service = new SofService();
+
+export default service;
