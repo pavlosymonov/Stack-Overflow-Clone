@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 import { HomePage, UsersPage, TagsPage, QuestionPage, TaggedQuestionsPage, UserPage, SearchPage } from '../pages';
-import {HeaderContainer} from "../../containers";
+import { HeaderContainer } from '../../containers';
 
 function App() {
   return (
@@ -16,8 +16,7 @@ function App() {
         <Route exact path="/users/:id" component={UserPage} />
         <Route exact path="/questions/tagged/:tagName" component={TaggedQuestionsPage} />
         <Route exact path="/search/" component={SearchPage} />
-        <Redirect from='/Stack-Overflow-Clone/' to="/" />
-        {/* <Redirect to="/" /> */}
+        <Redirect to="/" />
       </Switch>
       <Route exact path="/blank" />
     </>

@@ -1,6 +1,6 @@
 # usof - Clone Stack Overflow
 
-Look at result: (https://dumagenon.github.io/Stack-Overflow-Clone/)
+Look at result: (https://pavlosymonov.github.io/Stack-Overflow-Clone/)
 
 ## Available Scripts
 
